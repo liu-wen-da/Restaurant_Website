@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 
 html {
-  background-color: gray; /* this controlls the whole page color */
+  background-color: gray; /* this controls the whole page color */
 }
 
 body {
@@ -13,8 +13,6 @@ body {
 a {
   color: #00B7FF;
 }
-
-
 
 /* Style the navigation bar */
 nav {
@@ -54,4 +52,25 @@ nav {
   width: 75%; /* Adjust size as needed */
   height: auto;
   padding: 10px;
+}
+
+/* Apply these styles when the screen size is 768px or smaller */
+@media (max-width: 768px) {
+  /* Make the nav menu stack on smaller screens */
+  nav {
+    flex-direction: column;
+  }
+
+  /* Expand the logo a bit on smaller screens */
+  .logo {
+    width: 280%;
+  }
+}
+
+/* Apply these styles when the screen size is above 2560px */
+@media (min-width: 2560px) {
+  /* Reduce the logo size on larger screens */
+  .logo {
+    width: 50%; /* Adjust size as needed */
+  }
 }
