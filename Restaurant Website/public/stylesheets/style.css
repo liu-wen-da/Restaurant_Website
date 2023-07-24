@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 
 html {
-  background-color: gray; /* this controls the whole page color */
+  background-color: rgb(255, 255, 255); /* this controls the whole page color */
 }
 
 body {
@@ -17,7 +17,7 @@ a {
 /* Style the navigation bar */
 nav {
   display: flex;
-  background-color: rgb(188, 160, 33);
+  background-color: rgb(255, 255, 255);
 }
 
 /* Style the links inside the navigation bar */
@@ -35,7 +35,7 @@ nav {
 
 .nav_links li a {
   display: block;
-  color: white;
+  color: rgb(0, 0, 0);
   text-align: center;
   padding: 16px 18px;
   text-decoration: none;
@@ -44,7 +44,9 @@ nav {
 
 /* Change color on hover */
 .nav_links li a:hover {
-  background-color: #111;
+  border-bottom: 3px solid rgb(0, 0, 0);
+  padding: 5px;
+  margin: 2px;
 }
 
 /* Style the logo */
@@ -52,6 +54,21 @@ nav {
   width: 75%; /* Adjust size as needed */
   height: auto;
   padding: 10px;
+}
+
+/* font style */
+.font_style {
+  font-family: 'Montserrat';
+}
+
+.carousel_pic_container {
+  width: 100%;
+  height: 800px; /* Set height to your desired value */
+  object-fit: cover;
+}
+
+.nav_margin {
+  margin-right: 2.5%;
 }
 
 /* Apply these styles when the screen size is 768px or smaller */
