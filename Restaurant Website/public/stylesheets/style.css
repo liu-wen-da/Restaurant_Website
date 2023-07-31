@@ -64,6 +64,11 @@ nav {
   height: auto;
   padding: 10px;
 }
+.logo_footer {
+  width: 50%; /* Adjust size as needed */
+  height: auto;
+  padding: 10px;
+}
 
 /* font style */
 .font_style_name {
