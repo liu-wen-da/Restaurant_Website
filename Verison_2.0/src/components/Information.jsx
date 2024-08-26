@@ -13,9 +13,9 @@ const Information = () => {
                     <p className="body-1 mas-w-3xl mx-auto mb-6 text-n-2 lg:mb-8">
                         Iron Wok is a family-owned Chinese restaurant that has been serving both Americanized and authentic Chinese cuisine for the past seven years. We strive to stay deeply connected to our roots and the community we serve, embracing simplicity, a sense of humor, and a genuine love for honest food, good company, and shared experiences.
                     </p>
-                    <Button href="/Menu" white>
+                    {/* <Button href="/Menu" white>
                         food menu
-                    </Button>
+                    </Button> */}
                 </div>
                 <div>
 
