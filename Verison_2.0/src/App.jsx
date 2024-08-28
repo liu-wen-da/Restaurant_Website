@@ -3,6 +3,7 @@ import Button from './components/Button';
 import Header from './components/Header';
 import Menu from './components/Menu';
 import Information from './components/Information';
+import Location from './components/Location';
 const App = () =>{
 
   return (
@@ -11,6 +12,7 @@ const App = () =>{
         <Header />
         <Information />
         <Menu />
+        <Location />
 
       </div>
 
