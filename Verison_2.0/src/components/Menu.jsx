@@ -5,23 +5,23 @@ import Section from './Section'
 
 
 const normalMenuImages = [
-  '../src/assets/麻辣馆/1.png',
-  '../src/assets/麻辣馆/2.png',
-  '../src/assets/麻辣馆/3.png',
-  '../src/assets/麻辣馆/4.png',
-  '../src/assets/麻辣馆/5.png',
-  '../src/assets/麻辣馆/6.png',
-  '../src/assets/麻辣馆/7.png',
-  '../src/assets/麻辣馆/8.png',
+  '../src/assets/menu/1.png',
+  '../src/assets/menu/2.png',
+  '../src/assets/menu/3.png',
+  '../src/assets/menu/4.png',
+  '../src/assets/menu/5.png',
+  '../src/assets/menu/6.png',
+  '../src/assets/menu/7.png',
+  '../src/assets/menu/8.png',
 ];
 
 const authenticChineseImages = [
-  '../src/assets/麻辣馆/12.jpg',
-  '../src/assets/麻辣馆/13.jpg',
+  '../src/assets/menu/12.jpg',
+  '../src/assets/menu/13.jpg',
 ];
 
 const hotPotImages = [
-  '../src/assets/麻辣馆/11.jpg',
+  '../src/assets/menu/11.jpg',
 ];
 
 const Menu = () => {
