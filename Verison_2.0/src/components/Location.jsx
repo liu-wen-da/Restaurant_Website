@@ -1,19 +1,8 @@
 import React from 'react';
 import Section from './Section';
+import mapImage from '/src/assets/staticmap.png';
 
 
-
-
-const mapContainerStyle = {
-  width: '100%',
-  height: '100%',
-  minHeight: '300px',
-};
-
-const center = {
-  lat: 46.7150211,
-  lng: -117.0031635,
-};
 
 const Location = () => {
   return (
@@ -39,6 +28,11 @@ const Location = () => {
               <li>Sunday: 11:00 AM - 9:00 PM</li>
             </ul>
           </div>
+        </div>
+        
+        {/* Static Map */}
+        <div className="h-[300px] md:h-full">
+          <img src={mapImage} alt="Map" className="w-full h-full object-cover" />
         </div>
         
       </div>
