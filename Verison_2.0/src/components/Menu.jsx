@@ -1,27 +1,38 @@
 import React, { useState } from 'react';
 import ModalImage from 'react-modal-image';
 import Section from './Section'
+import { menu1 } from '../assets';
+import { menu2 } from '../assets';
+import { menu3 } from '../assets';
+import { menu4 } from '../assets';
+import { menu5 } from '../assets';
+import { menu6 } from '../assets';
+import { menu7 } from '../assets';
+import { menu8 } from '../assets';
+import { menu11 } from '../assets';
+import { menu12 } from '../assets';
+import { menu13 } from '../assets';
 
 
 
 const normalMenuImages = [
-  '../src/assets/1.png',
-  '../src/assets/2.png',
-  '../src/assets/3.png',
-  '../src/assets/4.png',
-  '../src/assets/5.png',
-  '../src/assets/6.png',
-  '../src/assets/7.png',
-  '../src/assets/8.png',
+  menu1,
+  menu2,
+  menu3,
+  menu4,
+  menu5,
+  menu6,
+  menu7,
+  menu8
 ];
 
 const authenticChineseImages = [
-  '../src/assets/12.jpg',
-  '../src/assets/13.jpg',
+  menu12, 
+  menu13
 ];
 
 const hotPotImages = [
-  '../src/assets/11.jpg',
+  menu11
 ];
 
 const Menu = () => {
