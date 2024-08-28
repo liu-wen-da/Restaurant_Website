@@ -26,19 +26,22 @@ const hotPotImages = [
 
 const Menu = () => {
   return (
-    <Section className="pt-[2rem]">
+    <Section className="pt-[2rem]" id="Menu">
       <div className="container mx-auto">
-        
+        <h1 className="h1 mb-8 text-center mt-20">Menu's</h1>
+        <p className="body-1 text-n-2 mb-4 text-center"> We offer three different menu options: Americanized Chinese, Authentic Chinese, and Hot Pot.
+            As we don't offer delivery services, but you can order for pick-up by calling us at (208) 874-8007.
+        </p>
         {/* Normal Menu Section */}
         <div className="mb-[3rem]">
-          <h1 className="h1 mb-8 text-center mt-20">Menu</h1>
+          <h1 className="h1 mb-8 text-center mt-20">Americanized chinese</h1>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4">
             {normalMenuImages.map((src, index) => (
               <div key={index} className="relative">
                 <ModalImage
                   small={src}
                   large={src}
-                  alt={`Menu item ${index + 1}`}
+                  alt={`Menu ${index + 1}`}
                   className="w-full h-auto border-2 border-gray-300 cursor-pointer hover:border-gray-500 transition-all"
                 />
               </div>
@@ -48,14 +51,14 @@ const Menu = () => {
 
         {/* Authentic Chinese Section */}
         <div className="mb-[3rem]">
-          <h2 className="h1 mb-8 text-center">Authentic Chinese</h2>
+          <h2 className="h1 mb-8 text-center">Authentic Chinese menu</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 justify-center gap-4">
             {authenticChineseImages.map((src, index) => (
               <div key={index} className="relative">
                 <ModalImage
                   small={src}
                   large={src}
-                  alt={`Authentic Chinese item ${index + 1}`}
+                  alt={`Authentic Chinese ${index + 1}`}
                   className="w-full h-auto border-2 border-gray-300 cursor-pointer hover:border-gray-500 transition-all"
                 />
               </div>
@@ -72,7 +75,7 @@ const Menu = () => {
                 <ModalImage
                   small={src}
                   large={src}
-                  alt={`Hot Pot item ${index + 1}`}
+                  alt={`Hot Pot`}
                   className="w-full h-auto max-w-xs border-2 border-gray-300 cursor-pointer hover:border-gray-500 transition-all"
                 />
               </div>

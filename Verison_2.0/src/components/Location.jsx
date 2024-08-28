@@ -6,7 +6,7 @@ import mapImage from '/src/assets/staticmap.png';
 
 const Location = () => {
   return (
-    <Section className="pt-[2rem]">
+    <Section className="pt-[2rem]" id="Contact">
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
         
         {/* Address and Hours of Operation */}
@@ -27,6 +27,10 @@ const Location = () => {
               <li>Saturday: 11:00 AM - 9:00 PM</li>
               <li>Sunday: 11:00 AM - 9:00 PM</li>
             </ul>
+          </div>
+          <div>
+            <h1 className="text-xl font-semibold mb-2">Contact</h1>
+            <p>Phone: (208) 874-8007</p>
           </div>
         </div>
         
