@@ -16,7 +16,7 @@ const Information = () => {
 
                     {/* This Section is for announcements */}
                     <p className="body-1 mas-w-3xl mx-auto mb-6 text-n-2 lg:mb-8">
-                        On September 3rd, we will open at 1:00 PM. We apologize for any inconvenience this may cause. Thank you for your understanding.
+                        
                     </p>
 
                     {/* <Button href="/Menu" white>
