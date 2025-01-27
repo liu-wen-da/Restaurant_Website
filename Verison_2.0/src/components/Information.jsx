@@ -1,29 +1,24 @@
-import Button from './Button'
-import Section from './Section'
+import Section from './Section';
+import { chowmein } from "../assets"; // Assuming you have an image to display
 
 const Information = () => {
-    return (
+  return (
+    <Section className="bg-black text-white" id="About">
+      <div className="container mx-auto flex flex-col lg:flex-row items-center justify-between py-16">
+        <div className="lg:w-1/2 text-center lg:text-left lg:mr-12">
+          <h2 className="text-lg text-gray-400 mb-2 font-serif">About Us</h2>
+          <h1 className="text-4xl lg:text-6xl font-bold text-golden mb-6 font-display">Iron Wok</h1>
+          <p className="text-base lg:text-lg mb-16 font-serif">
+            Iron Wok is a family-owned Chinese restaurant that has been serving both Americanized and authentic Chinese cuisine for the past seven years. We strive to stay deeply connected to our roots and the community we serve, embracing simplicity, a sense of humor, and a genuine love for honest food, good company, and shared experiences.
+          </p>
+        </div>
 
-        <Section className="pt-[12rem] -mt-[5.25rem]" crosses crossesOffset="lg:translate-y-[5.25rem]" customePadddings id="About">
-            <div className="container relative">
-                <div className="relative z-1 max-w-[62rem] mx-auto text-center mb-[3.875rem] md:mb-20 lg:mb-[6.25rem]">
-                    <h1 className="h1 mb-6">
-                        Iron Wok
-                    </h1>
-                    <p className="body-1 mas-w-3xl mx-auto mb-6 text-n-2 lg:mb-8">
-                        Iron Wok is a family-owned Chinese restaurant that has been serving both Americanized and authentic Chinese cuisine for the past seven years. We strive to stay deeply connected to our roots and the community we serve, embracing simplicity, a sense of humor, and a genuine love for honest food, good company, and shared experiences.
-                    </p>
-                    {/* <Button href="/Menu" white>
-                        food menu
-                    </Button> */}
-                </div>
-                <div>
-
-                </div>
-            </div>
-
-        </Section>
-    )
+        <div className="lg:w-1/2 mt-8 lg:mt-0 lg:ml-16">
+          <img src={chowmein} alt="noddles" className="w-full h-auto" />
+        </div>
+      </div>
+    </Section>
+  );
 };
 
-export default Information
+export default Information;

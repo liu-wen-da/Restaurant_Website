@@ -1,4 +1,5 @@
 import ironwok from "./iron-wok-logo.png";
+import chowmein from "./chowmein.jpg";
 import menu1 from "./1.png";
 import menu2 from "./2.png";
 import menu3 from "./3.png";
@@ -16,6 +17,7 @@ import menu13 from "./13.jpg";
 
 export {
   ironwok,
+  chowmein,
   menu1,
   menu2,
   menu3,
