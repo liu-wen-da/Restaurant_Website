@@ -1,88 +1,243 @@
-import React, { useState } from 'react';
+import React from 'react';
 import ModalImage from 'react-modal-image';
-import Section from './Section'
+import Section from './Section';
+import { menu1, menu2, menu3, menu4, menu5, menu6, menu7, menu8, menu11, menu12, menu13, lunch, apps } from '../assets';
 
-
-
-const normalMenuImages = [
-  '../src/assets/麻辣馆/1.png',
-  '../src/assets/麻辣馆/2.png',
-  '../src/assets/麻辣馆/3.png',
-  '../src/assets/麻辣馆/4.png',
-  '../src/assets/麻辣馆/5.png',
-  '../src/assets/麻辣馆/6.png',
-  '../src/assets/麻辣馆/7.png',
-  '../src/assets/麻辣馆/8.png',
-];
-
-const authenticChineseImages = [
-  '../src/assets/麻辣馆/12.jpg',
-  '../src/assets/麻辣馆/13.jpg',
-];
-
-const hotPotImages = [
-  '../src/assets/麻辣馆/11.jpg',
-];
+const lunchSpecialsImages = [lunch];
+const individualPortionsImages = [menu2];
+const authenticChineseImages = [menu12, menu13];
+const sharedDiningImages = [apps, menu3, menu4, menu5, menu6, menu7, menu8, ]; 
+const hotPotImages = [menu11];
 
 const Menu = () => {
   return (
-    <Section className="pt-[2rem]" id="Menu">
-      <div className="container mx-auto">
-        <h1 className="h1 mb-8 text-center mt-20">Menu's</h1>
-        <p className="body-1 text-n-2 mb-4 text-center"> We offer three different menu options: Americanized Chinese, Authentic Chinese, and Hot Pot.
-            As we don't offer delivery services, but you can order for pick-up by calling us at (208) 874-8007.
-        </p>
-        {/* Normal Menu Section */}
-        <div className="mb-[3rem]">
-          <h1 className="h1 mb-8 text-center mt-20">Americanized chinese</h1>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4">
-            {normalMenuImages.map((src, index) => (
-              <div key={index} className="relative">
-                <ModalImage
-                  small={src}
-                  large={src}
-                  alt={`Menu ${index + 1}`}
-                  className="w-full h-auto border-2 border-gray-300 cursor-pointer hover:border-gray-500 transition-all"
-                />
-              </div>
-            ))}
-          </div>
+    <Section className="bg-black text-white pt-[2rem]" id="Menu">
+      <div className="container mx-auto px-4">
+        {/* Main Header */}
+        <div className="text-center mb-16 relative">
+          <h1 className="text-4xl lg:text-6xl font-display mb-8 text-center text-golden">
+            Culinary Selection
+          </h1>
+          <p className="text-lg lg:text-xl text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed">
+            Explore our exquisite menu offerings. From modern interpretations to traditional favorites, each dish is crafted with precision and care.
+          </p>
         </div>
 
+        {/* Sticky Navigation */}
+        <div className="sticky top-20 z-10 bg-black/80 backdrop-blur-sm py-4 mb-12">
+          <nav className="flex flex-col gap-y-3 items-center px-4 md:flex-row md:justify-center md:px-0">
+            {/* First Row - 3 Items */}
+            <div className="flex gap-3 w-full justify-center md:w-auto">
+              {['Lunch Specials', 'Individual Portions', 'Authentic Chinese'].map((item) => (
+                <a
+                  key={item}
+                  href={`#${item.toLowerCase().replace(/\s+/g, '-')}`}
+                  className="px-4 py-2 rounded-full border border-golden/20 bg-black/10 hover:bg-golden/10 transition-all duration-300 
+                            text-golden hover:text-white font-semibold text-sm relative whitespace-nowrap
+                            hover:shadow-[0_0_15px] hover:shadow-golden/30
+                            transform hover:-translate-y-0.5
+                            group"
+                >
+                  {item}
+                  <span className="absolute bottom-0 left-0 w-full h-[1px] bg-golden 
+                                  transform scale-x-0 group-hover:scale-x-100 
+                                  transition-transform duration-300 origin-left" />
+                </a>
+              ))}
+            </div>
+            
+            {/* Second Row - 2 Items */}
+            <div className="flex gap-3 w-full justify-center md:w-auto">
+              {['Hot Pot', 'Shared Dining'].map((item) => (
+                <a
+                  key={item}
+                  href={`#${item.toLowerCase().replace(/\s+/g, '-')}`}
+                  className="px-4 py-2 rounded-full border border-golden/20 bg-black/10 hover:bg-golden/10 transition-all duration-300 
+                            text-golden hover:text-white font-semibold text-sm relative whitespace-nowrap
+                            hover:shadow-[0_0_15px] hover:shadow-golden/30
+                            transform hover:-translate-y-0.5
+                            group"
+                >
+                  {item}
+                  <span className="absolute bottom-0 left-0 w-full h-[1px] bg-golden 
+                                  transform scale-x-0 group-hover:scale-x-100 
+                                  transition-transform duration-300 origin-left" />
+                </a>
+              ))}
+            </div>
+          </nav>
+        </div>
+            
+        {/* Lunch Specials Section */}
+        <section className="mb-20 relative" id="lunch-specials">
+          <div className="flex items-center justify-center gap-4 mb-12">
+            <div className="h-px flex-1 bg-gradient-to-r from-transparent to-golden" />
+            <h2 className="text-3xl lg:text-4xl font-display text-golden text-center px-4">
+              Lunch Specials
+              <span className="block text-sm text-gray-400 mt-2 font-sans font-normal">
+                Daily Curated Combos
+                <span className="block mt-1 text-xs text-golden/80 italic">
+                  Available Monday through Sunday, 11:00 AM – 3:30 PM
+                </span>
+              </span>
+            </h2>
+            <div className="h-px flex-1 bg-gradient-to-l from-transparent to-golden" />
+          </div>
+          <div className="grid grid-cols-1 justify-items-center">
+            {lunchSpecialsImages.map((src, index) => (
+              <div key={index} className="group relative overflow-hidden rounded-2xl hover:shadow-2xl transition-shadow duration-300 w-full max-w-2xl">
+                <ModalImage
+                  small={src}
+                  large={src}
+                  alt={`Lunch Special ${index + 1}`}
+                  className="w-full h-64 object-cover cursor-pointer"
+                  hideDownload
+                  hideZoom
+                />
+                <div className="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                  <span className="bg-golden text-black px-6 py-2 rounded-full font-bold text-lg">
+                    Enlarge Menu
+                  </span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Individual Portions Section */}
+        <section className="mb-20 relative" id="individual-portions">
+          <div className="flex items-center justify-center gap-4 mb-12">
+            <div className="h-px flex-1 bg-gradient-to-r from-transparent to-golden" />
+            <h2 className="text-3xl lg:text-4xl font-display text-golden text-center px-4">
+              Individual Portions
+              <span className="block text-sm text-gray-400 mt-2 font-sans font-normal">
+                Personalized Servings
+                <span className="block mt-1 text-xs text-golden/80 italic">
+                  Perfectly portioned for individual enjoyment
+                </span>
+              </span>
+            </h2>
+            <div className="h-px flex-1 bg-gradient-to-l from-transparent to-golden" />
+          </div>
+          <div className="grid grid-cols-1 justify-items-center">
+          {individualPortionsImages.map((src, index) => (
+              <div key={index} className="group relative overflow-hidden rounded-2xl hover:shadow-2xl transition-shadow duration-300 w-full max-w-2xl">
+                <ModalImage
+                  small={src}
+                  large={src}
+                  alt={`Individual Portion ${index + 1}`}
+                  className="w-full h-64 object-cover cursor-pointer"
+                  hideDownload
+                  hideZoom
+                />
+                <div className="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                  <span className="bg-golden text-black px-6 py-2 rounded-full font-bold text-lg">
+                    Enlarge Menu
+                  </span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Shared Dining Section */}
+        <section className="mb-20 relative" id="shared-dining">
+          <div className="flex items-center justify-center gap-4 mb-12">
+            <div className="h-px flex-1 bg-gradient-to-r from-transparent to-golden" />
+            <h2 className="text-3xl lg:text-4xl font-display text-golden text-center px-4">
+              Shared Dining
+              <span className="block text-sm text-gray-400 mt-2 font-sans font-normal">
+                Group Feast Experiences
+                <span className="block mt-1 text-xs text-golden/80 italic">
+                  Perfect for sharing with friends or family
+                </span>
+              </span>
+            </h2>
+            <div className="h-px flex-1 bg-gradient-to-l from-transparent to-golden" />
+          </div>
+          <div className="grid grid-cols-2 gap-8 justify-items-center">
+            {sharedDiningImages.map((src, index) => (
+              <div key={index} className="group relative overflow-hidden rounded-2xl hover:shadow-2xl transition-shadow duration-300 w-full max-w-2xl">
+              <ModalImage
+                small={src}
+                large={src}
+                alt={`Lunch Special ${index + 1}`}
+                className="w-full h-64 object-cover cursor-pointer"
+                hideDownload
+                hideZoom
+                />
+                <div className="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                  <span className="bg-golden text-black px-6 py-2 rounded-full font-bold text-lg">
+                    Enlarge Menu
+                  </span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
         {/* Authentic Chinese Section */}
-        <div className="mb-[3rem]">
-          <h2 className="h1 mb-8 text-center">Authentic Chinese menu</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 justify-center gap-4">
+        <section className="mb-20 relative" id="authentic-chinese">
+          <div className="flex items-center justify-center gap-4 mb-12">
+            <div className="h-px flex-1 bg-gradient-to-r from-transparent to-golden" />
+            <h2 className="text-3xl lg:text-4xl font-display text-golden text-center px-4">
+              Authentic Chinese
+              <span className="block text-sm text-gray-400 mt-2 font-sans font-normal">Traditional Delicacies</span>
+            </h2>
+            <div className="h-px flex-1 bg-gradient-to-l from-transparent to-golden" />
+          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {authenticChineseImages.map((src, index) => (
-              <div key={index} className="relative">
+              <div key={index} className="group relative overflow-hidden rounded-2xl hover:shadow-2xl transition-shadow duration-300">
                 <ModalImage
                   small={src}
                   large={src}
-                  alt={`Authentic Chinese ${index + 1}`}
-                  className="w-full h-auto border-2 border-gray-300 cursor-pointer hover:border-gray-500 transition-all"
+                  alt={`Authentic Dish ${index + 1}`}
+                  className="w-full h-96 object-cover cursor-pointer"
+                  hideDownload
+                  hideZoom
                 />
+                <div className="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                  <span className="bg-golden text-black px-6 py-2 rounded-full font-bold text-lg">
+                    Enlarge Menu
+                  </span>
+                </div>
               </div>
             ))}
           </div>
-        </div>
-        
+        </section>
+
         {/* Hot Pot Section */}
-        <div className="mb-[3rem]">
-          <h2 className="h1 mb-8 text-center">Hot Pot</h2>
-          <div className="grid grid-cols-1 justify-center gap-4">
+        <section className="mb-20 relative" id="hot-pot">
+          <div className="flex items-center justify-center gap-4 mb-12">
+            <div className="h-px flex-1 bg-gradient-to-r from-transparent to-golden" />
+            <h2 className="text-3xl lg:text-4xl font-display text-golden text-center px-4">
+              Hot Pot
+              <span className="block text-sm text-gray-400 mt-2 font-sans font-normal">Signature Broths & Ingredients</span>
+            </h2>
+            <div className="h-px flex-1 bg-gradient-to-l from-transparent to-golden" />
+          </div>
+          <div className="grid grid-cols-1 gap-8">
             {hotPotImages.map((src, index) => (
-              <div key={index} className="relative">
+              <div key={index} className="group relative overflow-hidden rounded-2xl hover:shadow-2xl transition-shadow duration-300">
                 <ModalImage
                   small={src}
                   large={src}
-                  alt={`Hot Pot`}
-                  className="w-full h-auto max-w-xs border-2 border-gray-300 cursor-pointer hover:border-gray-500 transition-all"
+                  alt={`Hot Pot Menu ${index + 1}`}
+                  className="w-full h-[500px] object-cover cursor-pointer"
+                  hideDownload
+                  hideZoom
                 />
+                <div className="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                  <span className="bg-golden text-black px-6 py-2 rounded-full font-bold text-lg">
+                    Enlarge Menu
+                  </span>
+                </div>
               </div>
             ))}
           </div>
-        </div>
-        
+        </section>
+
       </div>
     </Section>
   );

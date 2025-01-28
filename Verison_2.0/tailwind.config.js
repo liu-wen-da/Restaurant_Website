@@ -11,6 +11,7 @@ export default {
   theme: {
     extend: {
       colors: {
+        golden: '#D4AF37',
         color: {
           1: "#AC6AFF",
           2: "#FFC876",
@@ -18,17 +19,18 @@ export default {
           4: "#7ADB78",
           5: "#858DFF",
           6: "#FF98E2",
+  
         },
         stroke: {
           1: "#26242C",
         },
         n: {
-          1: "#FFFFFF",
-          2: "#CAC6DD",
-          3: "#ADA8C3",
-          4: "#757185",
-          5: "#3F3A52",
-          6: "#252134",
+          1: "#F5F5F5", 
+          2: "#E0E0E0",
+          3: "#BDBDBD",
+          4: "#757575",
+          5: "#424242",
+          6: "#212121",  
           7: "#15131D",
           8: "#0E0C15",
           9: "#474060",
@@ -42,6 +44,10 @@ export default {
         sans: ["var(--font-sora)", ...fontFamily.sans],
         code: "var(--font-code)",
         grotesk: "var(--font-grotesk)",
+        display: ['"Playfair Display"', 'serif'],
+        serif: ['Lora', 'serif'],
+        sans: ['Your Sans Font', 'sans-serif'],
+        display: ['Your Display Font', 'serif']
       },
       letterSpacing: {
         tagline: ".15em",
@@ -72,65 +78,38 @@ export default {
       },
       backgroundImage: {
         "radial-gradient": "radial-gradient(var(--tw-gradient-stops))",
-        "conic-gradient":
-          "conic-gradient(from 225deg, #FFC876, #79FFF7, #9F53FF, #FF98E2, #FFC876)",
+        "conic-gradient": "conic-gradient(from 225deg, #FFC876, #79FFF7, #9F53FF, #FF98E2, #FFC876)",
+        'golden-gradient': 'linear-gradient(45deg, #D4AF37 0%, #B8860B 50%, #D4AF37 100%)',
+        'menu-overlay': 'linear-gradient(180deg, rgba(21,19,29,0.95) 0%, rgba(33,33,33,0.9) 100%)',
+        'menu-accent': 'linear-gradient(90deg, transparent 0%, #D4AF37 50%, transparent 100%)',
       },
+      keyframes: {
+        'fade-in': {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+        'golden-pulse': {
+          '0%, 100%': { 'border-color': '#D4AF37' },
+          '50%': { 'border-color': '#B8860B' }
+        }
+      },
+      animation: {
+        'fade-in': 'fade-in 0.5s ease-out',
+        'golden-pulse': 'golden-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite'
+      },
+      dropShadow: {
+        glow: [
+          '0 0 5px rgba(255,215,0,0.5)',
+          '0 0 15px rgba(255,215,0,0.3)'
+        ]
+      },
+      
+      
     },
   },
   plugins: [
     plugin(function ({ addBase, addComponents, addUtilities }) {
-      addBase({});
-      addComponents({
-        ".container": {
-          "@apply max-w-[77.5rem] mx-auto px-5 md:px-10 lg:px-15 xl:max-w-[87.5rem]":
-            {},
-        },
-        ".h1": {
-          "@apply font-semibold text-[2.5rem] leading-[3.25rem] md:text-[2.75rem] md:leading-[3.75rem] lg:text-[3.25rem] lg:leading-[4.0625rem] xl:text-[3.75rem] xl:leading-[4.5rem]":
-            {},
-        },
-        ".h2": {
-          "@apply text-[1.75rem] leading-[2.5rem] md:text-[2rem] md:leading-[2.5rem] lg:text-[2.5rem] lg:leading-[3.5rem] xl:text-[3rem] xl:leading-tight":
-            {},
-        },
-        ".h3": {
-          "@apply text-[2rem] leading-normal md:text-[2.5rem]": {},
-        },
-        ".h4": {
-          "@apply text-[2rem] leading-normal": {},
-        },
-        ".h5": {
-          "@apply text-2xl leading-normal": {},
-        },
-        ".h6": {
-          "@apply font-semibold text-lg leading-8": {},
-        },
-        ".body-1": {
-          "@apply text-[0.875rem] leading-[1.5rem] md:text-[1rem] md:leading-[1.75rem] lg:text-[1.25rem] lg:leading-8":
-            {},
-        },
-        ".body-2": {
-          "@apply font-light text-[0.875rem] leading-6 md:text-base": {},
-        },
-        ".caption": {
-          "@apply text-sm": {},
-        },
-        ".tagline": {
-          "@apply font-grotesk font-light text-xs tracking-tagline uppercase":
-            {},
-        },
-        ".quote": {
-          "@apply font-code text-lg leading-normal": {},
-        },
-        ".button": {
-          "@apply font-code text-xs font-bold uppercase tracking-wider": {},
-        },
-      });
-      addUtilities({
-        ".tap-highlight-color": {
-          "-webkit-tap-highlight-color": "rgba(0, 0, 0, 0)",
-        },
-      });
+      // Add your custom plugin code here
     }),
   ],
 };
