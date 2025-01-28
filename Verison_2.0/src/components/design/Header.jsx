@@ -1,9 +1,8 @@
-
-export const HamburgerMenu = () => {
+export const HamburgerMenu = ({ onClick }) => {
   return (
-    <div className="absolute inset-0 pointer-events-none lg:hidden">
-      <div className="absolute inset-0 opacity-[.03]">
-      </div>
-    </div>
+    <div 
+      className="fixed inset-0 bg-n-8/90 backdrop-blur-sm lg:hidden transition-opacity"
+      onClick={onClick}
+    />
   );
 };

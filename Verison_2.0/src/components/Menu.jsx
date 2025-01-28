@@ -1,12 +1,12 @@
 import React from 'react';
 import ModalImage from 'react-modal-image';
 import Section from './Section';
-import { menu1, menu2, menu3, menu4, menu5, menu6, menu7, menu8, menu11, menu12, menu13, lunch } from '../assets';
+import { menu1, menu2, menu3, menu4, menu5, menu6, menu7, menu8, menu11, menu12, menu13, lunch, apps } from '../assets';
 
 const lunchSpecialsImages = [lunch];
 const individualPortionsImages = [menu2];
 const authenticChineseImages = [menu12, menu13];
-const sharedDiningImages = [menu3, menu4, menu5, menu6, menu7, menu8]; 
+const sharedDiningImages = [apps, menu3, menu4, menu5, menu6, menu7, menu8, ]; 
 const hotPotImages = [menu11];
 
 const Menu = () => {
@@ -25,24 +25,46 @@ const Menu = () => {
 
         {/* Sticky Navigation */}
         <div className="sticky top-20 z-10 bg-black/80 backdrop-blur-sm py-4 mb-12">
-          <nav className="flex justify-center gap-4">
-            {['Lunch Specials', 'Individual Portions', 'Authentic Chinese', 'Hot Pot', 'Shared Dining'].map((item) => (
-              <a
-                key={item}
-                href={`#${item.toLowerCase().replace(/\s+/g, '-')}`}
-                className="px-6 py-2 rounded-full border border-golden/20 bg-black/10 hover:bg-golden/10 transition-all duration-300 
-                          text-golden hover:text-white font-semibold text-sm relative
-                          hover:shadow-[0_0_15px] hover:shadow-golden/30
-                          transform hover:-translate-y-0.5
-                          group"
-              >
-                {item}
-                {/* Animated underline */}
-                <span className="absolute bottom-0 left-0 w-full h-[1px] bg-golden 
-                                transform scale-x-0 group-hover:scale-x-100 
-                                transition-transform duration-300 origin-left" />
-              </a>
-            ))}
+          <nav className="flex flex-col gap-y-3 items-center px-4 md:flex-row md:justify-center md:px-0">
+            {/* First Row - 3 Items */}
+            <div className="flex gap-3 w-full justify-center md:w-auto">
+              {['Lunch Specials', 'Individual Portions', 'Authentic Chinese'].map((item) => (
+                <a
+                  key={item}
+                  href={`#${item.toLowerCase().replace(/\s+/g, '-')}`}
+                  className="px-4 py-2 rounded-full border border-golden/20 bg-black/10 hover:bg-golden/10 transition-all duration-300 
+                            text-golden hover:text-white font-semibold text-sm relative whitespace-nowrap
+                            hover:shadow-[0_0_15px] hover:shadow-golden/30
+                            transform hover:-translate-y-0.5
+                            group"
+                >
+                  {item}
+                  <span className="absolute bottom-0 left-0 w-full h-[1px] bg-golden 
+                                  transform scale-x-0 group-hover:scale-x-100 
+                                  transition-transform duration-300 origin-left" />
+                </a>
+              ))}
+            </div>
+            
+            {/* Second Row - 2 Items */}
+            <div className="flex gap-3 w-full justify-center md:w-auto">
+              {['Hot Pot', 'Shared Dining'].map((item) => (
+                <a
+                  key={item}
+                  href={`#${item.toLowerCase().replace(/\s+/g, '-')}`}
+                  className="px-4 py-2 rounded-full border border-golden/20 bg-black/10 hover:bg-golden/10 transition-all duration-300 
+                            text-golden hover:text-white font-semibold text-sm relative whitespace-nowrap
+                            hover:shadow-[0_0_15px] hover:shadow-golden/30
+                            transform hover:-translate-y-0.5
+                            group"
+                >
+                  {item}
+                  <span className="absolute bottom-0 left-0 w-full h-[1px] bg-golden 
+                                  transform scale-x-0 group-hover:scale-x-100 
+                                  transition-transform duration-300 origin-left" />
+                </a>
+              ))}
+            </div>
           </nav>
         </div>
             

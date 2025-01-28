@@ -20,7 +20,7 @@ const Information = () => {
             </div>
 
             <p className="text-lg lg:text-xl text-gray-300 leading-relaxed font-sans mb-8 lg:mb-10 max-w-3xl mx-auto lg:mx-0">
-              For seven generations, Iron Wok has been the heartbeat of authentic Chinese cuisine, 
+              For seven generations, <span className="text-golden">Iron Wok</span> has been the heartbeat of authentic Chinese cuisine, 
               blending time-honored traditions with contemporary flair. As a family-owned establishment, 
               we take pride in crafting both classic dishes and modern interpretations, all while 
               maintaining our deep connection to culinary heritage.
