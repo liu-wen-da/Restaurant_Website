@@ -8,6 +8,7 @@ import menu5 from "./5.png";
 import menu6 from "./6.png";
 import menu7 from "./7.png";
 import menu8 from "./8.png";
+import lunch from "./lunch.png";
 
 import menu11 from "./11.jpg";
 import menu12 from "./12.jpg";
@@ -18,6 +19,7 @@ import menu13 from "./13.jpg";
 export {
   ironwok,
   chowmein,
+  lunch,
   menu1,
   menu2,
   menu3,

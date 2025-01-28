@@ -12,23 +12,26 @@ export default {
     extend: {
       colors: {
         color: {
+          golden: '#D4AF37',
           1: "#AC6AFF",
           2: "#FFC876",
           3: "#FF776F",
           4: "#7ADB78",
           5: "#858DFF",
           6: "#FF98E2",
+          golden: '#FFD700', // or your preferred gold color
         },
         stroke: {
           1: "#26242C",
         },
         n: {
-          1: "#FFFFFF",
-          2: "#CAC6DD",
-          3: "#ADA8C3",
-          4: "#757185",
-          5: "#3F3A52",
-          6: "#252134",
+          1: "#F5F5F5",  // Lightest
+          2: "#E0E0E0",
+          3: "#BDBDBD",
+          4: "#757575",
+          5: "#424242",
+          6: "#212121",  // Darkest
+          // Keeping your existing numbered colors but adjusted for better harmony
           7: "#15131D",
           8: "#0E0C15",
           9: "#474060",
@@ -44,6 +47,8 @@ export default {
         grotesk: "var(--font-grotesk)",
         display: ['"Playfair Display"', 'serif'],
         serif: ['Lora', 'serif'],
+        sans: ['Your Sans Font', 'sans-serif'],
+        display: ['Your Display Font', 'serif']
       },
       letterSpacing: {
         tagline: ".15em",
@@ -75,17 +80,32 @@ export default {
       backgroundImage: {
         "radial-gradient": "radial-gradient(var(--tw-gradient-stops))",
         "conic-gradient": "conic-gradient(from 225deg, #FFC876, #79FFF7, #9F53FF, #FF98E2, #FFC876)",
-        'golden-gradient': 'linear-gradient(to right, #D4AF37, #B8860B, #D4AF37)',
+        'golden-gradient': 'linear-gradient(45deg, #D4AF37 0%, #B8860B 50%, #D4AF37 100%)',
+        'menu-overlay': 'linear-gradient(180deg, rgba(21,19,29,0.95) 0%, rgba(33,33,33,0.9) 100%)',
+        'menu-accent': 'linear-gradient(90deg, transparent 0%, #D4AF37 50%, transparent 100%)',
       },
       keyframes: {
         'fade-in': {
           '0%': { opacity: '0' },
           '100%': { opacity: '1' },
         },
+        'golden-pulse': {
+          '0%, 100%': { 'border-color': '#D4AF37' },
+          '50%': { 'border-color': '#B8860B' }
+        }
       },
       animation: {
         'fade-in': 'fade-in 0.5s ease-out',
+        'golden-pulse': 'golden-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite'
       },
+      dropShadow: {
+        glow: [
+          '0 0 5px rgba(255,215,0,0.5)',
+          '0 0 15px rgba(255,215,0,0.3)'
+        ]
+      },
+      
+      
     },
   },
   plugins: [

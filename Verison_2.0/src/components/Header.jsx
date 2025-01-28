@@ -33,8 +33,17 @@ const Header = () => {
       openNavigation ? "bg-black" : "bg-black/90 backdrop-blur-sm"
     }`}>
       <div className="flex items-center justify-between px-5 lg:px-10 py-4">
-        <a className="block w-[12rem] xl:mr-8">
-          <img src={ironwok} width={190} height={40} alt="Iron Wok" />
+        <a className="block xl:mr-8 group relative">
+          <span className="text-3xl font-bold tracking-wide uppercase 
+            bg-gradient-to-r from-yellow-400 via-golden to-yellow-500 
+            bg-clip-text text-transparent
+            transition-all duration-300
+            group-hover:scale-105 group-hover:drop-shadow-glow">
+            Iron Wok
+          </span>
+          {/* Optional animated underline */}
+          <div className="absolute bottom-0 left-0 w-0 h-[2px] bg-gradient-to-r from-yellow-400 to-golden 
+            transition-all duration-300 group-hover:w-full"></div>
         </a>
         <nav className={`${openNavigation ? "flex" : "hidden"} fixed top-[5rem] left-0 right-0 bottom-0 bg-black lg:static lg:flex lg:mx-auto lg:bg-transparent lg:justify-center`}>
           <div className="relative z-2 flex flex-col items-center justify-center lg:flex-row lg:space-x-8">
