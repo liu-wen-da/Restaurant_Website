@@ -11,27 +11,26 @@ export default {
   theme: {
     extend: {
       colors: {
+        golden: '#D4AF37',
         color: {
-          golden: '#D4AF37',
           1: "#AC6AFF",
           2: "#FFC876",
           3: "#FF776F",
           4: "#7ADB78",
           5: "#858DFF",
           6: "#FF98E2",
-          golden: '#FFD700', // or your preferred gold color
+  
         },
         stroke: {
           1: "#26242C",
         },
         n: {
-          1: "#F5F5F5",  // Lightest
+          1: "#F5F5F5", 
           2: "#E0E0E0",
           3: "#BDBDBD",
           4: "#757575",
           5: "#424242",
-          6: "#212121",  // Darkest
-          // Keeping your existing numbered colors but adjusted for better harmony
+          6: "#212121",  
           7: "#15131D",
           8: "#0E0C15",
           9: "#474060",
