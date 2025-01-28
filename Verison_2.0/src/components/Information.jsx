@@ -1,20 +1,54 @@
 import Section from './Section';
-import { chowmein } from "../assets"; // Assuming you have an image to display
+import { chowmein } from "../assets";
 
 const Information = () => {
   return (
-    <Section className="bg-black text-white" id="About">
-      <div className="container mx-auto flex flex-col lg:flex-row items-center justify-between py-16">
-        <div className="lg:w-1/2 text-center lg:text-left lg:mr-12">
-          <h2 className="text-lg text-gray-400 mb-2 font-serif">About Us</h2>
-          <h1 className="text-4xl lg:text-6xl font-bold text-golden mb-6 font-display">Iron Wok</h1>
-          <p className="text-base lg:text-lg mb-16 font-serif">
-            Iron Wok is a family-owned Chinese restaurant that has been serving both Americanized and authentic Chinese cuisine for the past seven years. We strive to stay deeply connected to our roots and the community we serve, embracing simplicity, a sense of humor, and a genuine love for honest food, good company, and shared experiences.
-          </p>
-        </div>
+    <Section className="bg-black text-white py-16 lg:py-24 relative" id="About" crosses>
+      <div className="container mx-auto px-4">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
+          {/* Text Content */}
+          <div className="lg:w-1/2 space-y-6">
+            <div className="flex items-center justify-center gap-4 mb-8">
+              <div className="h-px flex-1 bg-gradient-to-r from-transparent to-golden" />
+              <h1 className="text-3xl lg:text-4xl font-display text-golden px-4 text-center">
+                Our Story
+                <span className="block text-sm text-golden/80 mt-2 font-sans font-normal tracking-wide">
+                  Tradition & Passion
+                </span>
+              </h1>
+              <div className="h-px flex-1 bg-gradient-to-l from-transparent to-golden" />
+            </div>
 
-        <div className="lg:w-1/2 mt-8 lg:mt-0 lg:ml-16">
-          <img src={chowmein} alt="noddles" className="w-full h-auto" />
+            <p className="text-lg lg:text-xl text-gray-300 leading-relaxed font-sans mb-8 lg:mb-10 max-w-3xl mx-auto lg:mx-0">
+              For seven generations, <span className="text-golden">Iron Wok</span> has been the heartbeat of authentic Chinese cuisine, 
+              blending time-honored traditions with contemporary flair. As a family-owned establishment, 
+              we take pride in crafting both classic dishes and modern interpretations, all while 
+              maintaining our deep connection to culinary heritage.
+            </p>
+
+            <p className="text-lg lg:text-xl text-gray-300 leading-relaxed font-sans border-l-4 border-golden/30 pl-6 italic">
+              Our philosophy is simple: exceptional ingredients, masterful technique, and 
+              genuine hospitality. Every dish tells a story. 
+              <span className="block mt-2 not-italic text-golden/80">
+                Join us in creating new memories around our table.
+              </span>
+            </p>
+          </div>
+
+          {/* Image */}
+          <div className="lg:w-1/2 relative group">
+            <div className="relative overflow-hidden rounded-2xl transform transition-all duration-500 hover:shadow-2xl hover:-translate-y-2">
+              <img 
+                src={chowmein} 
+                alt="Handcrafted noodles" 
+                className="w-full h-auto object-cover aspect-[4/3]"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+              <span className="absolute bottom-4 left-4 text-golden font-sans text-sm">
+                Crafted with Precision, Served with Pride
+              </span>
+            </div>
+          </div>
         </div>
       </div>
     </Section>

@@ -1,22 +1,21 @@
 import React from 'react';
 import ModalImage from 'react-modal-image';
 import Section from './Section';
-import { menu1, menu2, menu3, menu4, menu5, menu6, menu7, menu8, menu11, menu12, menu13 } from '../assets';
+import { menu1, menu2, menu3, menu4, menu5, menu6, menu7, menu8, menu11, menu12, menu13, lunch, apps } from '../assets';
 
-const lunchSpecialsImages = [menu1];
+const lunchSpecialsImages = [lunch];
 const individualPortionsImages = [menu2];
 const authenticChineseImages = [menu12, menu13];
-const sharedDiningImages = [menu3, menu4, menu5, menu6, menu7, menu8]; 
+const sharedDiningImages = [apps, menu3, menu4, menu5, menu6, menu7, menu8, ]; 
 const hotPotImages = [menu11];
 
 const Menu = () => {
   return (
-    <Section className="bg-gradient-to-b from-black to-[#0a0a0a] text-white pt-[2rem]" id="Menu">
+    <Section className="bg-black text-white pt-[2rem]" id="Menu">
       <div className="container mx-auto px-4">
-
         {/* Main Header */}
         <div className="text-center mb-16 relative">
-          <h1 className="text-4xl lg:text-6xl font-bold mb-8 text-center mt-20 bg-gradient-to-r from-golden via-yellow-600 to-golden bg-clip-text text-transparent">
+          <h1 className="text-4xl lg:text-6xl font-display mb-8 text-center text-golden">
             Culinary Selection
           </h1>
           <p className="text-lg lg:text-xl text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed">
@@ -26,28 +25,61 @@ const Menu = () => {
 
         {/* Sticky Navigation */}
         <div className="sticky top-20 z-10 bg-black/80 backdrop-blur-sm py-4 mb-12">
-          <nav className="flex justify-center gap-8">
-            {['Lunch Specials', 'Individual Portions', 'Authentic Chinese', 'Hot Pot', 'Shared Dining'].map((item) => (
-              <a
-                key={item}
-                href={`#${item.toLowerCase().replace(/\s+/g, '-')}`}
-                className="text-golden hover:text-white transition-colors duration-300 text-lg font-semibold relative
-                           after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-[2px] 
-                           after:bg-golden hover:after:w-full after:transition-all after:duration-300"
-              >
-                {item}
-              </a>
-            ))}
+          <nav className="flex flex-col gap-y-3 items-center px-4 md:flex-row md:justify-center md:px-0">
+            {/* First Row - 3 Items */}
+            <div className="flex gap-3 w-full justify-center md:w-auto">
+              {['Lunch Specials', 'Individual Portions', 'Authentic Chinese'].map((item) => (
+                <a
+                  key={item}
+                  href={`#${item.toLowerCase().replace(/\s+/g, '-')}`}
+                  className="px-4 py-2 rounded-full border border-golden/20 bg-black/10 hover:bg-golden/10 transition-all duration-300 
+                            text-golden hover:text-white font-semibold text-sm relative whitespace-nowrap
+                            hover:shadow-[0_0_15px] hover:shadow-golden/30
+                            transform hover:-translate-y-0.5
+                            group"
+                >
+                  {item}
+                  <span className="absolute bottom-0 left-0 w-full h-[1px] bg-golden 
+                                  transform scale-x-0 group-hover:scale-x-100 
+                                  transition-transform duration-300 origin-left" />
+                </a>
+              ))}
+            </div>
+            
+            {/* Second Row - 2 Items */}
+            <div className="flex gap-3 w-full justify-center md:w-auto">
+              {['Hot Pot', 'Shared Dining'].map((item) => (
+                <a
+                  key={item}
+                  href={`#${item.toLowerCase().replace(/\s+/g, '-')}`}
+                  className="px-4 py-2 rounded-full border border-golden/20 bg-black/10 hover:bg-golden/10 transition-all duration-300 
+                            text-golden hover:text-white font-semibold text-sm relative whitespace-nowrap
+                            hover:shadow-[0_0_15px] hover:shadow-golden/30
+                            transform hover:-translate-y-0.5
+                            group"
+                >
+                  {item}
+                  <span className="absolute bottom-0 left-0 w-full h-[1px] bg-golden 
+                                  transform scale-x-0 group-hover:scale-x-100 
+                                  transition-transform duration-300 origin-left" />
+                </a>
+              ))}
+            </div>
           </nav>
         </div>
-
+            
         {/* Lunch Specials Section */}
         <section className="mb-20 relative" id="lunch-specials">
           <div className="flex items-center justify-center gap-4 mb-12">
             <div className="h-px flex-1 bg-gradient-to-r from-transparent to-golden" />
             <h2 className="text-3xl lg:text-4xl font-display text-golden text-center px-4">
               Lunch Specials
-              <span className="block text-sm text-gray-400 mt-2 font-sans font-normal">Daily Curated Combos</span>
+              <span className="block text-sm text-gray-400 mt-2 font-sans font-normal">
+                Daily Curated Combos
+                <span className="block mt-1 text-xs text-golden/80 italic">
+                  Available Monday through Sunday, 11:00 AM – 3:30 PM
+                </span>
+              </span>
             </h2>
             <div className="h-px flex-1 bg-gradient-to-l from-transparent to-golden" />
           </div>
@@ -78,7 +110,12 @@ const Menu = () => {
             <div className="h-px flex-1 bg-gradient-to-r from-transparent to-golden" />
             <h2 className="text-3xl lg:text-4xl font-display text-golden text-center px-4">
               Individual Portions
-              <span className="block text-sm text-gray-400 mt-2 font-sans font-normal">Personalized Servings</span>
+              <span className="block text-sm text-gray-400 mt-2 font-sans font-normal">
+                Personalized Servings
+                <span className="block mt-1 text-xs text-golden/80 italic">
+                  Perfectly portioned for individual enjoyment
+                </span>
+              </span>
             </h2>
             <div className="h-px flex-1 bg-gradient-to-l from-transparent to-golden" />
           </div>
@@ -109,7 +146,12 @@ const Menu = () => {
             <div className="h-px flex-1 bg-gradient-to-r from-transparent to-golden" />
             <h2 className="text-3xl lg:text-4xl font-display text-golden text-center px-4">
               Shared Dining
-              <span className="block text-sm text-gray-400 mt-2 font-sans font-normal">Group Feast Experiences</span>
+              <span className="block text-sm text-gray-400 mt-2 font-sans font-normal">
+                Group Feast Experiences
+                <span className="block mt-1 text-xs text-golden/80 italic">
+                  Perfect for sharing with friends or family
+                </span>
+              </span>
             </h2>
             <div className="h-px flex-1 bg-gradient-to-l from-transparent to-golden" />
           </div>
