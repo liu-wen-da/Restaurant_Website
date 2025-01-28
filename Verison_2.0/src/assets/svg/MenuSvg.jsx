@@ -1,4 +1,4 @@
-const MenuSvg = ({ openNavigation }) => {
+const MenuSvg = ({ openNavigation, className }) => {
   return (
     <svg
       className="overflow-visible"
