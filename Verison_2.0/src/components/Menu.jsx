@@ -27,13 +27,13 @@ const Menu = () => {
         <div className="sticky top-20 z-10 bg-black/80 backdrop-blur-sm py-4 mb-12">
           <nav className="flex flex-col gap-y-3 items-center px-4 md:flex-row md:justify-center md:px-0">
             {/* First Row - 3 Items */}
-            <div className="flex gap-3 w-full justify-center md:w-auto">
+            <div className="flex gap-2 md:gap-3 w-full justify-center md:w-auto">
               {['Lunch Specials', 'Individual Portions', 'Authentic Chinese'].map((item) => (
                 <a
                   key={item}
                   href={`#${item.toLowerCase().replace(/\s+/g, '-')}`}
-                  className="px-4 py-2 rounded-full border border-golden/20 bg-black/10 hover:bg-golden/10 transition-all duration-300 
-                            text-golden hover:text-white font-semibold text-sm relative whitespace-nowrap
+                  className="px-3 py-1.5 md:px-4 md:py-2 rounded-full border border-golden/20 bg-black/10 hover:bg-golden/10 transition-all duration-300 
+                            text-xs md:text-sm text-golden hover:text-white font-semibold relative whitespace-nowrap
                             hover:shadow-[0_0_15px] hover:shadow-golden/30
                             transform hover:-translate-y-0.5
                             group"
@@ -47,13 +47,13 @@ const Menu = () => {
             </div>
             
             {/* Second Row - 2 Items */}
-            <div className="flex gap-3 w-full justify-center md:w-auto">
+            <div className="flex gap-2 md:gap-3 w-full justify-center md:w-auto">
               {['Hot Pot', 'Shared Dining'].map((item) => (
                 <a
                   key={item}
                   href={`#${item.toLowerCase().replace(/\s+/g, '-')}`}
-                  className="px-4 py-2 rounded-full border border-golden/20 bg-black/10 hover:bg-golden/10 transition-all duration-300 
-                            text-golden hover:text-white font-semibold text-sm relative whitespace-nowrap
+                  className="px-3 py-1.5 md:px-4 md:py-2 rounded-full border border-golden/20 bg-black/10 hover:bg-golden/10 transition-all duration-300 
+                            text-xs md:text-sm text-golden hover:text-white font-semibold relative whitespace-nowrap
                             hover:shadow-[0_0_15px] hover:shadow-golden/30
                             transform hover:-translate-y-0.5
                             group"
@@ -161,7 +161,7 @@ const Menu = () => {
               <ModalImage
                 small={src}
                 large={src}
-                alt={`Lunch Special ${index + 1}`}
+                alt={`Shared Dining ${index + 1}`}
                 className="w-full h-64 object-cover cursor-pointer"
                 hideDownload
                 hideZoom
