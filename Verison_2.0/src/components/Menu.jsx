@@ -93,6 +93,7 @@ const Menu = () => {
                   className="w-full h-64 object-cover cursor-pointer"
                   hideDownload
                   hideZoom
+                  hideOnClickOutside={true}
                 />
                 <div className="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
                   <span className="bg-golden text-black px-6 py-2 rounded-full font-bold text-lg">
@@ -129,6 +130,7 @@ const Menu = () => {
                   className="w-full h-64 object-cover cursor-pointer"
                   hideDownload
                   hideZoom
+                  hideOnClickOutside={true}
                 />
                 <div className="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
                   <span className="bg-golden text-black px-6 py-2 rounded-full font-bold text-lg">
@@ -165,6 +167,7 @@ const Menu = () => {
                 className="w-full h-64 object-cover cursor-pointer"
                 hideDownload
                 hideZoom
+                hideOnClickOutside={true}
                 />
                 <div className="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
                   <span className="bg-golden text-black px-6 py-2 rounded-full font-bold text-lg">
@@ -196,6 +199,7 @@ const Menu = () => {
                   className="w-full h-96 object-cover cursor-pointer"
                   hideDownload
                   hideZoom
+                  hideOnClickOutside={true}
                 />
                 <div className="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
                   <span className="bg-golden text-black px-6 py-2 rounded-full font-bold text-lg">
@@ -227,6 +231,7 @@ const Menu = () => {
                   className="w-full h-[500px] object-cover cursor-pointer"
                   hideDownload
                   hideZoom
+                  hideOnClickOutside={true}
                 />
                 <div className="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
                   <span className="bg-golden text-black px-6 py-2 rounded-full font-bold text-lg">
