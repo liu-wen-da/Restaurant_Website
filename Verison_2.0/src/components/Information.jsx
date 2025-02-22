@@ -19,20 +19,20 @@ const Information = () => {
     <Section className="bg-black text-white py-16 lg:py-24 relative" id="About" crosses>
 
       {/* Announcement Modal */}
-      {showAnnouncement && (
+      {/* {showAnnouncement && (
         <div className="fixed inset-0 z-50 bg-black-900/90 backdrop-blur-sm flex items-center justify-center p-4"
           onClick={() => setShowAnnouncement(false)}>
           <div className="relative bg-red-800 border-2 border-golden rounded-2xl max-w-2xl w-full p-8 mx-4 shadow-xl shadow-red-900/50"
-            onClick={(e) => e.stopPropagation()}>
+            onClick={(e) => e.stopPropagation()}> */}
             {/* Close Button */}
-            <button 
+            {/* <button 
               onClick={() => setShowAnnouncement(false)}
               className="absolute top-4 right-4 text-golden hover:text-red-100 transition-colors text-2xl">
               ✕
-            </button>
+            </button> */}
             
             {/* Announcement Content */}
-            <div className="text-center space-y-6">
+            {/* <div className="text-center space-y-6">
               <div className="flex items-center justify-center gap-4 mb-6">
                 <div className="h-px flex-1 bg-gradient-to-r from-transparent to-golden" />
                 <h2 className="text-2xl lg:text-3xl font-display text-golden px-4">
@@ -54,10 +54,10 @@ const Information = () => {
 
               <div className="bg-red-900/30 p-4 rounded-lg border border-golden/20">
                 <p className="text-sm text-golden/80 italic">
-                  🐍 Anticipated pening: Q4 2024 (or possibly earlier!)
+                  🐍 Anticipated Opening: Q4 2024 (or possibly earlier!)
                 </p>
                 <p className="text-sm text-red-200 mt-2">
-                  Current location remains open until new venue is ready
+                  Current location remains open until new location is ready
                 </p>
               </div>
 
@@ -72,7 +72,7 @@ const Information = () => {
             </div>
           </div>
         </div>
-      )}
+      )} */}
 
 
       <div className="container mx-auto px-4">
