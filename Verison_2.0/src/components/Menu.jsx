@@ -7,7 +7,7 @@ const lunchSpecialsImages = [lunch];
 const individualPortionsImages = [menu2];
 const authenticChineseImages = [menu12, menu13];
 const sharedDiningImages = [apps, menu3, menu4, menu5, menu6, menu7, menu8, ]; 
-const hotPotImages = [menu11];
+// const hotPotImages = [menu11];
 
 const Menu = () => {
   return (
@@ -48,7 +48,7 @@ const Menu = () => {
             
             {/* Second Row - 2 Items */}
             <div className="flex gap-2 md:gap-3 w-full justify-center md:w-auto">
-              {['Hot Pot', 'Shared Dining'].map((item) => (
+              {['Shared Dining'].map((item) => (
                 <a
                   key={item}
                   href={`#${item.toLowerCase().replace(/\s+/g, '-')}`}
@@ -212,7 +212,7 @@ const Menu = () => {
         </section>
 
         {/* Hot Pot Section */}
-        <section className="mb-20 relative" id="hot-pot">
+        {/* <section className="mb-20 relative" id="hot-pot">
           <div className="flex items-center justify-center gap-4 mb-12">
             <div className="h-px flex-1 bg-gradient-to-r from-transparent to-golden" />
             <h2 className="text-3xl lg:text-4xl font-display text-golden text-center px-4">
@@ -241,7 +241,7 @@ const Menu = () => {
               </div>
             ))}
           </div>
-        </section>
+        </section> */}
 
       </div>
     </Section>

@@ -18,7 +18,7 @@ const Information = () => {
   return (
     <Section className="bg-black text-white py-16 lg:py-24 relative" id="About" crosses>
 
-      {/* Announcement Modal */}
+      {/* Announcement Model  New Years Color Theme*/}
       {/* {showAnnouncement && (
         <div className="fixed inset-0 z-50 bg-black-900/90 backdrop-blur-sm flex items-center justify-center p-4"
           onClick={() => setShowAnnouncement(false)}>
@@ -73,6 +73,65 @@ const Information = () => {
           </div>
         </div>
       )} */}
+
+      {/* Announcement Model */}
+      {showAnnouncement && (
+        <div className="fixed inset-0 z-50 bg-black/90 backdrop-blur-sm flex items-center justify-center p-4"
+          onClick={() => setShowAnnouncement(false)}>
+          <div className="relative bg-black border border-golden/30 rounded-2xl max-w-2xl w-full p-8 mx-4 shadow-xl shadow-golden/20"
+            onClick={(e) => e.stopPropagation()}>
+            {/* Close Button */}
+            <button 
+              onClick={() => setShowAnnouncement(false)}
+              className="absolute top-4 right-4 text-golden hover:text-white transition-colors text-2xl">
+              ✕
+            </button>
+            
+            {/* Announcement Content */}
+            <div className="text-center space-y-6">
+              <div className="flex items-center justify-center gap-4 mb-6">
+                <div className="h-px flex-1 bg-gradient-to-r from-transparent to-golden" />
+                <h2 className="text-2xl lg:text-3xl font-display text-golden px-4">
+                  New Chapter Ahead
+                  <span className="block text-sm text-gray-400 mt-2 font-sans">
+                    Location Update
+                  </span>
+                </h2>
+                <div className="h-px flex-1 bg-gradient-to-l from-transparent to-golden" />
+              </div>
+
+              <p className="text-gray-300 leading-relaxed font-sans mb-4">
+                Our last day at the current location will be 
+                <span className="text-golden block mt-2 text-lg font-medium">
+                  September 8th
+                </span>
+              </p>
+
+              <p className="text-gray-300 leading-relaxed font-sans mb-4">
+                Join us at our new home starting September 11th
+                <span className="text-golden block mt-2 text-lg font-medium">
+                  530 E Main St, Pullman WA
+                </span>
+              </p>
+
+              <div className="bg-black/50 p-4 rounded-lg border border-golden/20">
+                <p className="text-sm text-golden/80 italic">
+                  We look forward to serving you in our new location!
+                </p>
+              </div>
+
+              <div className="mt-6 border-t border-golden/20 pt-6">
+                <button 
+                  onClick={() => setShowAnnouncement(false)}
+                  className="px-8 py-2 rounded-full bg-golden/10 hover:bg-golden/20 border border-golden/30 text-golden 
+                    transition-all duration-300 hover:scale-105 font-semibold">
+                  Continue to Site →
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
 
 
       <div className="container mx-auto px-4">
