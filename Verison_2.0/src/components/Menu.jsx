@@ -1,12 +1,14 @@
 import React from 'react';
 import ModalImage from 'react-modal-image';
 import Section from './Section';
-import { menu1, menu2, menu3, menu4, menu5, menu6, menu7, menu8, menu11, menu12, menu13, lunch, apps } from '../assets';
+import { menu1, menu2, menu3, menu4, menu5, menu6, menu7, menu8, menu11, menu12, menu13, lunch, apps, DimSum  } from '../assets';
 
 const lunchSpecialsImages = [lunch];
 const individualPortionsImages = [menu2];
 const authenticChineseImages = [menu12, menu13];
 const sharedDiningImages = [apps, menu3, menu4, menu5, menu6, menu7, menu8, ]; 
+const dimsumimages  = [DimSum];
+
 // const hotPotImages = [menu11];
 
 const Menu = () => {
@@ -48,7 +50,7 @@ const Menu = () => {
             
             {/* Second Row - 2 Items */}
             <div className="flex gap-2 md:gap-3 w-full justify-center md:w-auto">
-              {['Shared Dining'].map((item) => (
+              {['Shared Dining', 'Dim Sum'].map((item) => (
                 <a
                   key={item}
                   href={`#${item.toLowerCase().replace(/\s+/g, '-')}`}
@@ -211,23 +213,23 @@ const Menu = () => {
           </div>
         </section>
 
-        {/* Hot Pot Section */}
-        {/* <section className="mb-20 relative" id="hot-pot">
+        {/* Dim Sum Section */}
+        <section className="mb-20 relative" id="dim-sum">
           <div className="flex items-center justify-center gap-4 mb-12">
             <div className="h-px flex-1 bg-gradient-to-r from-transparent to-golden" />
             <h2 className="text-3xl lg:text-4xl font-display text-golden text-center px-4">
-              Hot Pot
-              <span className="block text-sm text-gray-400 mt-2 font-sans font-normal">Signature Broths & Ingredients</span>
+              Dim Sum
+              <span className="block text-sm text-gray-400 mt-2 font-sans font-normal">Steamed & Fried Delights</span>
             </h2>
             <div className="h-px flex-1 bg-gradient-to-l from-transparent to-golden" />
           </div>
           <div className="grid grid-cols-1 gap-8">
-            {hotPotImages.map((src, index) => (
+            {dimsumimages.map((src, index) => (
               <div key={index} className="group relative overflow-hidden rounded-2xl hover:shadow-2xl transition-shadow duration-300">
                 <ModalImage
                   small={src}
                   large={src}
-                  alt={`Hot Pot Menu ${index + 1}`}
+                  alt={`Dim Sum Menu ${index + 1}`}
                   className="w-full h-[500px] object-cover cursor-pointer"
                   hideDownload
                   hideZoom
@@ -241,7 +243,7 @@ const Menu = () => {
               </div>
             ))}
           </div>
-        </section> */}
+        </section> 
 
       </div>
     </Section>

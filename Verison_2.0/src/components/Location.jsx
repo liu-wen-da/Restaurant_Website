@@ -50,7 +50,7 @@ const Location = () => {
                 Contact
               </h2>
               <p className="text-lg text-gray-300 hover:text-golden transition-colors">
-                <a href="tel:208-874-8007">(509) 332-1988</a>
+                <a href="tel:509-332-1988">(509) 332-1988</a>
               </p>
             </div>
           </div>

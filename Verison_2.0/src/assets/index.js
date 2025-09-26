@@ -10,6 +10,7 @@ import menu7 from "./7.png";
 import menu8 from "./8.png";
 import lunch from "./lunch.png";
 import apps from "./apps.png";
+import DimSum from "./DimSum.png";
 
 import menu11 from "./11.jpg";
 import menu12 from "./12.jpg";
@@ -33,6 +34,7 @@ export {
   menu11,
   menu12,
   menu13,
+  DimSum,
   // background,
 
 };
