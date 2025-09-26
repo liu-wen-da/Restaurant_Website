@@ -26,8 +26,8 @@ const Location = () => {
                 Address
               </h2>
               <p className="text-lg text-gray-300 leading-relaxed">
-                2010 S Main St<br />
-                Moscow ID, 83843
+                530 E Main St<br />
+                Pullman WA, 99163
               </p>
             </div>
 
@@ -50,13 +50,13 @@ const Location = () => {
                 Contact
               </h2>
               <p className="text-lg text-gray-300 hover:text-golden transition-colors">
-                <a href="tel:208-874-8007">(208) 874-8007</a>
+                <a href="tel:509-332-1988">(509) 332-1988</a>
               </p>
             </div>
           </div>
 
           {/* Enhanced Map Container */}
-          <div className="relative group h-[400px] lg:h-[550px]">
+          {/* <div className="relative group h-[400px] lg:h-[550px]">    NEED TO REPLACE MAP IMAGE WITH PULLMAN LOCATION
             <div className="absolute inset-0 rounded-2xl overflow-hidden border border-golden/20 hover:border-golden/40 transition-all duration-300">
               <img 
                 src={mapImage} 
@@ -71,7 +71,7 @@ const Location = () => {
                 </span>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </Section>
