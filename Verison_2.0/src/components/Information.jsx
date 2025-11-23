@@ -76,64 +76,75 @@ const Information = () => {
 
       {/* Announcement Model */}
       {showAnnouncement && (
-  <div className="fixed inset-0 z-50 bg-black/90 backdrop-blur-sm flex items-center justify-center p-4"
-    onClick={() => setShowAnnouncement(false)}>
-    <div className="relative bg-black border border-golden/30 rounded-2xl max-w-2xl w-full p-8 mx-4 shadow-xl shadow-golden/20"
-      onClick={(e) => e.stopPropagation()}>
-      {/* Close Button */}
-      <button 
-        onClick={() => setShowAnnouncement(false)}
-        className="absolute top-4 right-4 text-golden hover:text-white transition-colors text-2xl">
-        ✕
-      </button>
-      
-      {/* Announcement Content */}
-      <div className="text-center space-y-6">
-        <div className="flex items-center justify-center gap-4 mb-6">
-          <div className="h-px flex-1 bg-gradient-to-r from-transparent to-golden" />
-          <h2 className="text-2xl lg:text-3xl font-display text-golden px-4">
-            We're Now Open!
-            <span className="block text-sm text-gray-400 mt-2 font-sans">
-              Come Visit Our New Location
-            </span>
-          </h2>
-          <div className="h-px flex-1 bg-gradient-to-l from-transparent to-golden" />
+        <div className="fixed inset-0 z-50 bg-black/90 backdrop-blur-sm flex items-center justify-center p-4"
+          onClick={() => setShowAnnouncement(false)}>
+          <div className="relative bg-black border border-golden/30 rounded-2xl max-w-2xl w-full p-8 mx-4 shadow-xl shadow-golden/20"
+            onClick={(e) => e.stopPropagation()}>
+            {/* Close Button */}
+            <button 
+              onClick={() => setShowAnnouncement(false)}
+              className="absolute top-4 right-4 text-golden hover:text-white transition-colors text-2xl">
+              ✕
+            </button>
+            
+            {/* Announcement Content */}
+            <div className="text-center space-y-6">
+              <div className="flex items-center justify-center gap-4 mb-6">
+                <div className="h-px flex-1 bg-gradient-to-r from-transparent to-golden" />
+                <h2 className="text-2xl lg:text-3xl font-display text-golden px-4">
+                   Thanksgiving Notice
+                  <span className="block text-sm text-gray-400 mt-2 font-sans">
+                    Happy Thanksgiving!
+                  </span>
+                </h2>
+                <div className="h-px flex-1 bg-gradient-to-l from-transparent to-golden" />
+              </div>
+
+              <p className="text-gray-300 leading-relaxed font-sans mb-4">
+                As a family-owned business, we're allowing our family members to take time off 
+                to celebrate Thanksgiving with their loved ones.
+              </p>
+
+              <div className="bg-black/50 p-4 rounded-lg border border-golden/20">
+                <p className="text-golden font-medium mb-2">
+                  Remain Open with Limited Staff
+                </p>
+                <p className="text-gray-300 text-sm">
+                  Tuesday, November 25 - Friday, November 29
+                </p>
+
+              </div>
+
+              <div className="bg-red-900/20 p-4 rounded-lg border border-red-700/30">
+                <p className="text-golden font-medium mb-2">
+                  🦃 Family Thanksgiving Day Off:
+                </p>
+                <p className="text-gray-300 text-sm">
+                  Closed all day Thursday, November 28
+                </p>
+                <p className="text-xs text-gray-400 mt-2">
+                  Our entire family will be celebrating together
+                </p>
+              </div>
+
+              <p className="text-sm text-gray-400 italic">
+              Thank you for your patience and understanding as we try our best to serve you 
+              with limited family members available. We will be back to full staff on 
+              <span className="text-golden"> Saturday, November 30th</span>.
+              </p>
+
+              <div className="mt-6 border-t border-golden/20 pt-6">
+                <button 
+                  onClick={() => setShowAnnouncement(false)}
+                  className="px-8 py-2 rounded-full bg-golden/10 hover:bg-golden/20 border border-golden/30 text-golden 
+                    transition-all duration-300 hover:scale-105 font-semibold">
+                  View Our Menu →
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
-
-        <p className="text-gray-300 leading-relaxed font-sans mb-4">
-          We're thrilled to welcome you to our new home at
-        </p>
-
-        <p className="text-golden text-lg font-medium mb-4 bg-black/50 p-4 rounded-lg border border-golden/20">
-          530 E Main St<br />
-          Pullman WA 99163
-        </p>
-
-        <p className="text-gray-300 leading-relaxed font-sans">
-          Same authentic flavors, brand new space!
-        </p>
-
-        <div className="bg-black/50 p-4 rounded-lg border border-golden/20">
-          <p className="text-sm text-golden/80">
-            🕒 Hours: Monday-Sunday 11AM-9PM
-          </p>
-          <p className="text-xs text-gray-400 mt-2">
-            We look forward to serving you in our new location!
-          </p>
-        </div>
-
-        <div className="mt-6 border-t border-golden/20 pt-6">
-          <button 
-            onClick={() => setShowAnnouncement(false)}
-            className="px-8 py-2 rounded-full bg-golden/10 hover:bg-golden/20 border border-golden/30 text-golden 
-              transition-all duration-300 hover:scale-105 font-semibold">
-            Explore Our Menu →
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-)}
+      )}
 
 
       <div className="container mx-auto px-4">
